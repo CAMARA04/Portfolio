@@ -114,7 +114,7 @@ function displayModal(projectData) {
   const visitButton = document.createElement("button");
   visitButton.textContent = "Visiter le site";
   visitButton.addEventListener("click", () => {
-    window.open(projectData.website, "_blank"); // Ouvrir le site du projet dans un nouvel onglet
+    window.open(projectData.website, "_blank");
   });
   modalContent.appendChild(visitButton);
 
