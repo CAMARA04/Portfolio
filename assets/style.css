@@ -455,8 +455,9 @@ gap: 120px;
     margin: auto;
     padding: 40px;
     color: var(---gold-color);
-    border: 1px solid #fffefe91;
+    border: 2px solid #fffefe91;
     border-radius: 10px;
+    
     
     
   }
@@ -464,6 +465,7 @@ gap: 120px;
   .infos-contact{
     display: flex;
     justify-content: space-between;
+    
     
   }
 
@@ -480,6 +482,7 @@ gap: 120px;
 
   .contact-input{
     width: 40%;
+   
   
   }
 
