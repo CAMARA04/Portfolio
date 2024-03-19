@@ -127,6 +127,7 @@ function displayModal(projectData) {
 function fetchProjects() {
   const projectsContainer = document.querySelector(".projects");
 
+  // Fetching project data from projects.json
   fetch("projects.json")
     .then((response) => response.json())
     .then((data) => {
@@ -139,28 +140,45 @@ function fetchProjects() {
         projectImage.classList.add("project-image");
         projectCard.appendChild(projectImage);
 
+        const projectName = document.createElement("h3");
+        projectName.textContent = project.name;
+        projectCard.appendChild(projectName);
+        projectName.classList.add("titre-carte");
+
         const projectDescription = document.createElement("p");
         projectDescription.textContent = project.description;
         projectCard.appendChild(projectDescription);
 
-        const languagesContainer = document.createElement("div");
-        languagesContainer.classList.add("languages");
+        const projectLanguages = document.createElement("div");
+        projectLanguages.textContent = " ";
+        projectLanguages.classList.add("languages-list-container");
 
-        project.languages.forEach((languageIcon) => {
-          const languageLogo = document.createElement("img");
-          languageLogo.src = languageIcon;
+        const languageList = document.createElement("ul");
+        languageList.classList.add("language-list");
 
-          languagesContainer.appendChild(languageLogo);
+        project.languages.forEach((language) => {
+          const languageItem = document.createElement("li"); // Create list item for each language
+          languageItem.textContent = language; // Set language name as text content
+          languageList.appendChild(languageItem); // Append language item to the list
+        });
+        projectLanguages.appendChild(languageList); // Append the list to the projectLanguages div
+        projectCard.appendChild(projectLanguages); // Append the projectLanguages div to the projectCard
+
+        const learnMoreButton = document.createElement("button");
+        learnMoreButton.textContent = "En savoir plus";
+        learnMoreButton.classList.add("learn-more-button");
+        // Ajoutez un gestionnaire d'événements au bouton si nécessaire
+        learnMoreButton.addEventListener("click", () => {
+          // Ajoutez ici la logique pour gérer l'événement du clic sur le bouton "En savoir plus"
         });
 
-        projectCard.appendChild(languagesContainer);
-        projectsContainer.appendChild(projectCard);
+        projectCard.appendChild(learnMoreButton);
+
+        projectsContainer.appendChild(projectCard); // Append the projectCard to the projects container
       });
     })
     .catch((error) => console.error("Error fetching projects:", error));
 }
-
-// document.addEventListener("DOMContentLoaded", fetchProjects);
 
 //fontion pour initialiser email.js et gerer l'envoi des mails par le formulaire contzact
 

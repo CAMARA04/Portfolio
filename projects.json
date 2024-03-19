@@ -8,9 +8,8 @@
             "year":2023,
             "category":"Développement web",
             "languages":[
-                "assets/html.png",
-                "assets/css.png",
-                "assets/git-hub2.png"
+                "HTML",
+                "CSS"
                 
             ],
             "website": "https://www.google.fr/"   
@@ -25,8 +24,8 @@
             "year":2023,
             "category":"Développement web",
             "languages":[
-                "assets/html.png",
-                "assets/css.png"
+                "HTML",
+                "CSS"
             ],
             "website": "https://www.google.fr/"      
 
@@ -40,8 +39,8 @@
             "year":2023,
             "category":"Développement web",
             "languages":[
-                "assets/html.png",
-                "assets/css.png"
+                "HTML",
+                "CSS"
             ],
             "website": "https://www.google.fr/"     
         },
@@ -54,8 +53,8 @@
             "year":2023,
             "category":"Développement web",
             "languages":[
-                "assets/html.png",
-                "assets/css.png"
+                "HTML",
+                "CSS"
                
 
             ],
