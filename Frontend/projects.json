@@ -1,0 +1,70 @@
+{
+    "projects": [
+        {
+            "id":1,
+            "name":"BOOKI",
+            "image":"assets/booki.png" ,
+            "description": "Dévelopement d’un site internet permettant aux usagers de trouver des hébérgements et des activités dans la ville de leur choix.",
+            "year":2023,
+            "category":"Développement web",
+            "languages":[
+                "assets/html.png",
+                "assets/css.png",
+                "assets/git-hub2.png"
+                
+            ],
+            "website": "https://www.google.fr/"   
+
+        },
+
+        {
+            "id":2,
+            "name":"MON VEIEUX GRIMOIRE",
+            "image":"assets/Mon-vieux-grimoire.png" ,
+            "description": "Développemnt de la partie Bac-kend pour une librairie ayant la volonté d’ouvrir un site de référencement et de notation de livres.",
+            "year":2023,
+            "category":"Développement web",
+            "languages":[
+                "assets/html.png",
+                "assets/css.png"
+            ],
+            "website": "https://www.google.fr/"      
+
+        },
+
+        {
+            "id":3,
+            "name":"SOPHIE BLUEL",
+            "image":"assets/SOPHIE -BLUEL.jpg" ,
+            "description": "Mission front-end pour la conception du site portfolio d'une architecte d’intérieur.",
+            "year":2023,
+            "category":"Développement web",
+            "languages":[
+                "assets/html.png",
+                "assets/css.png"
+            ],
+            "website": "https://www.google.fr/"     
+        },
+
+        {
+            "id":4,
+            "name":"NINACARDUCCI",
+            "image":"assets/nina-carducci.jpg" ,
+            "description": "Optimisation SEO du site d’une photographe dans le but de gagner en performance et aussi améliorer l’expérience utilisateur.",
+            "year":2023,
+            "category":"Développement web",
+            "languages":[
+                "assets/html.png",
+                "assets/css.png"
+               
+
+            ],
+            "website": "https://www.google.fr/" 
+        }
+
+
+    ]
+
+
+
+}
