@@ -46,83 +46,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ajouter un délai pour que les liens apparaissent après l'animation du titre h1
   setTimeout(animateLinks, 1500);
-  // Événement pour afficher la modale lors du clic sur une carte de projet
-  let projects;
-  fetchProjects();
-
-  document.addEventListener("click", (event) => {
-    const clickedProjectCard = event.target.closest(".project-card");
-    if (clickedProjectCard) {
-      const projectId = clickedProjectCard.dataset.projectId;
-      if (projects) {
-        // Vérification que les projets sont disponibles
-        const projectData = projects.find(
-          (project) => project.id === projectId
-        );
-        if (projectData) {
-          displayModal(projectData);
-        }
-      }
-    }
-  });
 });
 
-// Fonction pour afficher la modale avec les détails du projet
-function displayModal(projectData) {
-  // Création de la modale
-  const modal = document.createElement("div");
-  modal.classList.add("modal");
-
-  // Contenu de la modale
-  const closeButton = document.createElement("span");
-  closeButton.classList.add("close-button");
-  closeButton.innerHTML = "&times;"; // × pour symboliser la fermeture
-  closeButton.addEventListener("click", () => {
-    modal.remove(); // Fermer la modale lors du clic sur le bouton de fermeture
-  });
-  modal.appendChild(closeButton);
-
-  const modalContent = document.createElement("div");
-  modalContent.classList.add("modal-content");
-
-  // Ajout des éléments de détails du projet à afficher dans la modale
-  const projectImage = document.createElement("img");
-  projectImage.src = projectData.image;
-  modalContent.appendChild(projectImage);
-
-  const projectName = document.createElement("h2");
-  projectName.textContent = projectData.name;
-  modalContent.appendChild(projectName);
-
-  const projectDescription = document.createElement("p");
-  projectDescription.textContent = projectData.description;
-  modalContent.appendChild(projectDescription);
-
-  const projectInfo = document.createElement("p");
-  projectInfo.textContent = `Année: ${projectData.year}, Catégorie: ${projectData.category}`;
-  modalContent.appendChild(projectInfo);
-
-  const projectLanguages = document.createElement("div");
-  projectLanguages.textContent = "Langages utilisés: ";
-  projectData.languages.forEach((language) => {
-    const languageIcon = document.createElement("img");
-    languageIcon.src = language;
-    projectLanguages.appendChild(languageIcon);
-  });
-  modalContent.appendChild(projectLanguages);
-
-  const visitButton = document.createElement("button");
-  visitButton.textContent = "Visiter le site";
-  visitButton.addEventListener("click", () => {
-    window.open(projectData.website, "_blank");
-  });
-  modalContent.appendChild(visitButton);
-
-  modal.appendChild(modalContent);
-
-  // Ajout de la modale au corps du document
-  document.body.appendChild(modal);
-}
+fetchProjects();
 
 function fetchProjects() {
   const projectsContainer = document.querySelector(".projects");
@@ -157,20 +83,16 @@ function fetchProjects() {
         languageList.classList.add("language-list");
 
         project.languages.forEach((language) => {
-          const languageItem = document.createElement("li"); // Create list item for each language
-          languageItem.textContent = language; // Set language name as text content
-          languageList.appendChild(languageItem); // Append language item to the list
+          const languageItem = document.createElement("li"); // Z
+          languageItem.textContent = language;
+          languageList.appendChild(languageItem);
         });
-        projectLanguages.appendChild(languageList); // Append the list to the projectLanguages div
-        projectCard.appendChild(projectLanguages); // Append the projectLanguages div to the projectCard
+        projectLanguages.appendChild(languageList);
+        projectCard.appendChild(projectLanguages);
 
         const learnMoreButton = document.createElement("button");
         learnMoreButton.textContent = "En savoir plus";
         learnMoreButton.classList.add("learn-more-button");
-        // Ajoutez un gestionnaire d'événements au bouton si nécessaire
-        learnMoreButton.addEventListener("click", () => {
-          // Ajoutez ici la logique pour gérer l'événement du clic sur le bouton "En savoir plus"
-        });
 
         projectCard.appendChild(learnMoreButton);
 
@@ -196,8 +118,6 @@ const initializeContactForm = () => {
         console.error("Le formulaire de contact n'a pas été trouvé.");
         return;
       }
-
-      const formData = new FormData(contactForm);
 
       emailjs
         .sendForm("service_gaeq7jf", "template_17a6d5k", "#contact-form")
