@@ -358,6 +358,7 @@ gap: 120px;
     background-color: white;
     border-radius: 20px 20px 0px 0px;
     
+    
 
 }
 
@@ -377,7 +378,7 @@ gap: 120px;
  
 }
 
-.languages-list-container{
+.project-card ul{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -389,8 +390,6 @@ gap: 120px;
     
    
 }
-
-
 
 .languages img {
     height: 200px;
@@ -457,19 +456,13 @@ gap: 120px;
     color: var(---gold-color);
     border: 2px solid #fffefe91;
     border-radius: 10px;
-    
-    
-    
+       
   }
 
   .infos-contact{
     display: flex;
-    justify-content: space-between;
-    
-    
+    justify-content: space-between; 
   }
-
-  
 
   .contact-input, .message-contact,.submit-contact{
     color: var(--text-white);
@@ -602,11 +595,6 @@ gap: 120px;
         margin-top: 30px;
         
        }
-    
-  
-    
-    
-
 }
 
 @media(max-width:990px){
@@ -711,11 +699,6 @@ gap: 120px;
     margin: 0 auto ;
     
    }
-
-  
-
-  
-
 
 .h2-bar::before{
     width: 80%;
@@ -881,6 +864,7 @@ gap: 120px;
     width: 60%;
     object-fit: cover;
     border-radius: 15px;
+    border: 1px solid var(---gold-color);
   }
 
   .img-description{
@@ -905,18 +889,18 @@ gap: 120px;
 
   .text-description{
     text-align: justify;
+    font-size: 20px;
   }
 
   .modal-infos-projet{
-   
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
    /* gap: 25%; */
     padding:20px 0px;
-    border-top: 1px solid var(---gold-color);
+    border: 1px solid var(---gold-color);
+    border-radius: 15px;
 
   }
-
 
   .modal-infos-title{
     font-size: 20px;
@@ -963,6 +947,117 @@ gap: 120px;
   .languages-list-modal li{
     color: black;
     font-weight: 400;
+  }
+
+  @media screen and (max-width: 1300px) {
+    .modal-content {
+      max-height: 90%; /* Utilisation de 60% de la hauteur de la fenêtre visible */
+      overflow-y: auto; /* Ajout d'une barre de défilement verticale si nécessaire */
+    }
+
+    .modal-title{
+        font-size: 25px;
+        margin-top: 10px;
+    }
+
+    .modal-content{
+        gap: 35px;
+        
+        
+    }
+
+    .infos-modal-general{
+        gap: 15px;
+    }
+
+    .modal-infos-projet{
+      padding: 0px;
+    }
+
+    .modal-img{
+        width: 50%;
+        /* max-height: 210px; */
+    
+    }
+
+    .modal-infos-projet{
+        padding: none;
+    }
+
+    .languages-list-modal ul,.infos-modal-general{
+        font-size: 18px;
+    }
+
+  }
+
+  @media screen and (max-width: 700px) {
+
+    .modal-content{
+        padding:0px;
+    }
+    .modal-title{
+        width: 90%;
+        padding: 15px 5px;
+        margin-top: 40px;
+    }
+
+  .close {
+    
+    top: 5px;
+    right: 10px;
+    font-size: 15px;
+    line-height: 20Px;
+    width: 20px;
+    height: 20px;
+  }
+
+  .img-description{
+    flex-direction: column;
+  }
+
+  .close:hover{
+    scale: none;
+  }
+
+  .modal-img{
+    width: 100%;
+    border-radius:0px;
+}
+
+.img-description{
+    align-items: center;
+}
+
+.titre-modal-description{
+    font-size: 22px;
+}
+
+.text-description{
+    font-size: 19px;
+}
+
+.modal-infos-projet{
+    display: flex;
+    flex-direction: column;
+    margin: 0px 10px 10px 10px;
+}
+
+.infos-modal-general,.languages-list-modal ul{
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-general{
+    padding: 20px 5px;   
+}
+
+.modal-languages,.modal-liens{
+    border-left: none;
+    border-top: 1px solid var(---gold-color) ;
+    padding: 20px 5px;
+}
+
+
   }
 
 
