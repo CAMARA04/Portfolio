@@ -46,9 +46,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Ajouter un délai pour que les liens apparaissent après l'animation du titre h1
   setTimeout(animateLinks, 1500);
+  fetchProjects();
 });
-
-fetchProjects();
 
 function fetchProjects() {
   const projectsContainer = document.querySelector(".projects");
@@ -93,6 +92,9 @@ function fetchProjects() {
         const learnMoreButton = document.createElement("button");
         learnMoreButton.textContent = "En savoir plus";
         learnMoreButton.classList.add("learn-more-button");
+        learnMoreButton.addEventListener("click", () => {
+          displayProjectModal(project); // Appeler la fonction pour afficher les détails du projet dans la modal
+        });
 
         projectCard.appendChild(learnMoreButton);
 
@@ -143,3 +145,29 @@ const initializeContactForm = () => {
 };
 
 initializeContactForm();
+
+function displayProjectModal(project) {
+  const modal = document.getElementById("projectModal");
+  const modalTitle = modal.querySelector(".modal-title");
+  const modalDescription = modal.querySelector(".modal-description");
+
+  // Fermer la modal lorsque le bouton de fermeture est cliqué
+  const closeButton = modal.querySelector(".close");
+
+  closeButton.addEventListener("click", () => {
+    console.log("je ferme la modale");
+    modal.style.display = "none";
+  });
+
+  // Fermer la modal lorsque l'utilisateur clique en dehors de la modal
+  window.addEventListener("click", (event) => {
+    if (event.target === modal) {
+      modal.style.display = "none";
+    }
+  });
+
+  modalTitle.textContent = project.name;
+  modalDescription.textContent = project.description;
+
+  modal.style.display = "block"; // Afficher la modal
+}
