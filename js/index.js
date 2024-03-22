@@ -152,7 +152,7 @@ function displayProjectModal(project) {
   const modalDescription = modal.querySelector(".modal-description");
 
   // Fermer la modal lorsque le bouton de fermeture est cliqué
-  const closeButton = modal.querySelector(".close");
+  const closeButton = document.querySelector(".close");
 
   closeButton.addEventListener("click", () => {
     console.log("je ferme la modale");
