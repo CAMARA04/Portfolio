@@ -57,53 +57,45 @@ function fetchProjects() {
     .then((response) => response.json())
     .then((data) => {
       data.projects.forEach((project) => {
-        const projectCard = document.createElement("div");
-        projectCard.classList.add("project-card");
-
-        const projectImage = document.createElement("img");
-        projectImage.src = project.image;
-        projectImage.classList.add("project-image");
-        projectCard.appendChild(projectImage);
-
-        const projectName = document.createElement("h3");
-        projectName.textContent = project.name;
-        projectCard.appendChild(projectName);
-        projectName.classList.add("titre-carte");
-
-        const projectDescription = document.createElement("p");
-        projectDescription.textContent = project.description;
-        projectCard.appendChild(projectDescription);
-
-        const projectLanguages = document.createElement("div");
-        projectLanguages.textContent = " ";
-        projectLanguages.classList.add("languages-list-container");
-
-        const languageList = document.createElement("ul");
-        languageList.classList.add("language-list");
-
-        project.languages.forEach((language) => {
-          const languageItem = document.createElement("li"); // Z
-          languageItem.textContent = language;
-          languageList.appendChild(languageItem);
-        });
-        projectLanguages.appendChild(languageList);
-        projectCard.appendChild(projectLanguages);
-
-        const learnMoreButton = document.createElement("button");
-        learnMoreButton.textContent = "En savoir plus";
-        learnMoreButton.classList.add("learn-more-button");
-        learnMoreButton.addEventListener("click", () => {
-          displayProjectModal(project); // Appeler la fonction pour afficher les détails du projet dans la modal
-        });
-
-        projectCard.appendChild(learnMoreButton);
-
+        const projectCard = createProjectCard(project);
         projectsContainer.appendChild(projectCard); // Append the projectCard to the projects container
       });
     })
     .catch((error) => console.error("Error fetching projects:", error));
 }
 
+function createProjectCard(project) {
+  const projectCard = document.createElement("div");
+  projectCard.classList.add("project-card");
+
+  const projectImage = document.createElement("img");
+  projectImage.src = project.image;
+  projectImage.classList.add("project-image");
+  projectCard.appendChild(projectImage);
+
+  const projectName = document.createElement("h3");
+  projectName.textContent = project.name;
+  projectCard.appendChild(projectName);
+  projectName.classList.add("titre-carte");
+
+  const projectDescription = document.createElement("p");
+  projectDescription.textContent = project.description;
+  projectCard.appendChild(projectDescription);
+
+  const projectLanguages = createLanguageList(project.languages);
+  projectCard.appendChild(projectLanguages);
+
+  const learnMoreButton = document.createElement("button");
+  learnMoreButton.textContent = "En savoir plus";
+  learnMoreButton.classList.add("learn-more-button");
+  learnMoreButton.addEventListener("click", () => {
+    displayProjectModal(project); // Appeler la fonction pour afficher les détails du projet dans la modal
+  });
+
+  projectCard.appendChild(learnMoreButton);
+
+  return projectCard;
+}
 //fontion pour initialiser email.js et gerer l'envoi des mails par le formulaire contzact
 
 const initializeContactForm = () => {
@@ -149,7 +141,11 @@ initializeContactForm();
 function displayProjectModal(project) {
   const modal = document.getElementById("projectModal");
   const modalTitle = modal.querySelector(".modal-title");
-  const modalDescription = modal.querySelector(".modal-description");
+  const modalDescription = modal.querySelector(".text-description");
+  const modalImg = modal.querySelector(".modal-img");
+  const modalGeneral = modal.querySelector(".infos-modal-general");
+  const modalLanguages = modal.querySelector(".languages-list-modal");
+  const modalLiens = modal.querySelector(".modal-liens");
 
   // Fermer la modal lorsque le bouton de fermeture est cliqué
   const closeButton = document.querySelector(".close");
@@ -168,6 +164,37 @@ function displayProjectModal(project) {
 
   modalTitle.textContent = project.name;
   modalDescription.textContent = project.description;
+  modalImg.src = project.image;
+
+  modalGeneral.innerHTML = "";
+  const yearElement = document.createElement("p");
+  yearElement.textContent = "Année : " + project.year;
+  modalGeneral.appendChild(yearElement);
+
+  const categoryElement = document.createElement("p");
+  categoryElement.textContent = "Catégorie : " + project.category;
+  modalGeneral.appendChild(categoryElement);
+
+  // Effacer les anciens langages
+  modalLanguages.innerHTML = "";
+
+  const languageListModal = createLanguageList(project.languages);
+  // languageListModal.classList.add("language-list-modal");
+
+  modalLanguages.appendChild(languageListModal);
 
   modal.style.display = "block"; // Afficher la modal
+}
+
+function createLanguageList(languages) {
+  const languageList = document.createElement("ul");
+  languageList.classList.add("language-list");
+
+  languages.forEach((language) => {
+    const languageItem = document.createElement("li");
+    languageItem.textContent = language;
+    languageList.appendChild(languageItem);
+  });
+
+  return languageList;
 }
