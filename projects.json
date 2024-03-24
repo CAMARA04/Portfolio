@@ -12,7 +12,16 @@
                 "CSS"
                 
             ],
-            "website": "https://www.google.fr/"   
+            "website": "https://www.google.fr/", 
+
+            "liens": [
+                {
+                  "icone": "./assets/Github-icon.png",
+                  "url": "https://github.com/CAMARA04/OC-Projet2-BOOKI.git",
+                  "lien vers":"Git-hub"
+                }
+               
+              ]
 
         },
 
@@ -27,7 +36,16 @@
                 "HTML",
                 "CSS"
             ],
-            "website": "https://www.google.fr/"      
+            "website": "https://www.google.fr/",
+            
+            "liens": [
+                {
+                  "icone": "./assets/Github-icon.png",
+                  "url": "https://github.com/CAMARA04/OC_Mon_Vieux_Grimoire.git",
+                  "lien vers":"Git-hub"
+                }
+               
+              ]
 
         },
 
@@ -42,7 +60,16 @@
                 "HTML",
                 "CSS"
             ],
-            "website": "https://www.google.fr/"     
+            "website": "https://www.google.fr/",
+            
+            "liens": [
+                {
+                  "icone": "./assets/Github-icon.png",
+                  "url": "https://github.com/CAMARA04/Portfolio-architecte-sophie-bluel.git",
+                  "lien vers":"Git-hub"
+                }
+               
+              ]
         },
 
         {
@@ -58,7 +85,16 @@
                
 
             ],
-            "website": "https://www.google.fr/" 
+            "website": "https://www.google.fr/",
+
+            "liens": [
+                {
+                  "icone": "./assets/Github-icon.png",
+                  "url": "https://github.com/CAMARA04/Optimisation-site-Nina-Carducci.git",
+                  "lien vers":"Git-hub"
+                }
+               
+              ]
         }
 
 

@@ -70,7 +70,7 @@ h3{
 
 }
 
-#a-propos,#competences,.projects,#contact{
+#a-propos,#competences,#contact{
     padding-left:30px;
 }
 
@@ -896,7 +896,6 @@ gap: 120px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
    /* gap: 25%; */
-    padding:20px 0px;
     border: 1px solid var(---gold-color);
     border-radius: 15px;
 
@@ -948,6 +947,23 @@ gap: 120px;
     color: black;
     font-weight: 400;
   }
+
+  .icone-lien-modal{
+    width: 40px;
+    border: 1px solid var(---gold-color);
+    border-radius: 5px;
+  }
+
+  .texte-lien-modal{
+    color: #000;
+  }
+  .lien-modal{
+    display: flex;
+    align-items: center;
+    gap: 40px;
+  }
+
+ 
 
   @media screen and (max-width: 1300px) {
     .modal-content {
@@ -1022,6 +1038,9 @@ gap: 120px;
   .modal-img{
     width: 100%;
     border-radius:0px;
+    border: none;
+   
+    
 }
 
 .img-description{
@@ -1056,9 +1075,15 @@ gap: 120px;
     border-top: 1px solid var(---gold-color) ;
     padding: 20px 5px;
 }
-
-
   }
+
+  @media screen and (max-width: 355px) {
+
+    .infos-modal-general,.languages-list-modal ul{
+       font-size: 16px;
+    }
+
+}
 
 
   

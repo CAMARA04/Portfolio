@@ -181,6 +181,8 @@ function displayProjectModal(project) {
   const languageListModal = createLanguageList(project.languages);
   // languageListModal.classList.add("language-list-modal");
 
+  displayProjectLinks(project);
+
   modalLanguages.appendChild(languageListModal);
 
   modal.style.display = "block"; // Afficher la modal
@@ -197,4 +199,37 @@ function createLanguageList(languages) {
   });
 
   return languageList;
+}
+
+function displayProjectLinks(project) {
+  const modalLiens = document.querySelector(".lien-container-modal");
+
+  modalLiens.innerHTML = "";
+
+  // Pour Vérifier si le projet a des liens
+  if (project.liens && project.liens.length > 0) {
+    // Boucler à travers les liens du projet
+    project.liens.forEach((lien) => {
+      const lienElement = document.createElement("a");
+      lienElement.href = lien.url;
+      lienElement.classList.add("lien-modal");
+      lienElement.target = "_blank";
+
+      // Créer un élément <img> pour l'icône
+      const iconeElement = document.createElement("img");
+      iconeElement.src = lien.icone;
+      iconeElement.alt = "Icône";
+      iconeElement.classList.add("icone-lien-modal");
+
+      const texteElementLienModal = document.createElement("p");
+      texteElementLienModal.textContent = lien["lien vers"];
+      texteElementLienModal.classList.add("texte-lien-modal");
+
+      lienElement.appendChild(iconeElement);
+      lienElement.appendChild(texteElementLienModal);
+
+      // Ajouter l'élément <a> à la div modal-liens
+      modalLiens.appendChild(lienElement);
+    });
+  }
 }
