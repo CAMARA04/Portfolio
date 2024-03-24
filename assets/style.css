@@ -80,6 +80,7 @@ h3{
     width: 100%;
     top: 0;
     z-index: 1000;
+    
 }
 
 .navbar ul li {
@@ -128,10 +129,16 @@ header nav ul{
     font-size: 20px;
 }
 
-.onglet:hover{
-    transform: scale(1.1); 
-    transition: transform 0.3s ease;
+#icone_telechargement{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   justify-content: center;
 }
+
+
+
+
 
 .hero{
     background-color:#000 ;
