@@ -215,30 +215,48 @@ function displayProjectLinks(project) {
 
   modalLiens.innerHTML = "";
 
-  // Pour Vérifier si le projet a des liens
+  let hasLinks = false; // Variable pour indiquer si des liens ont été ajoutés
+
   if (project.liens && project.liens.length > 0) {
-    // Boucler à travers les liens du projet
+    // Boucle à travers les liens du projet
+
     project.liens.forEach((lien) => {
-      const lienElement = document.createElement("a");
-      lienElement.href = lien.url;
-      lienElement.classList.add("lien-modal");
-      lienElement.target = "_blank";
+      // Pour Vérifier si l'URL du lien est définie
 
-      // Créer un élément <img> pour l'icône
-      const iconeElement = document.createElement("img");
-      iconeElement.src = lien.icone;
-      iconeElement.alt = "Icône";
-      iconeElement.classList.add("icone-lien-modal");
+      if (lien.url) {
+        hasLinks = true; // lien trouvé
 
-      const texteElementLienModal = document.createElement("p");
-      texteElementLienModal.textContent = lien["lien vers"];
-      texteElementLienModal.classList.add("texte-lien-modal");
+        const lienElement = document.createElement("a");
+        lienElement.href = lien.url;
+        lienElement.classList.add("lien-modal");
+        lienElement.target = "_blank";
 
-      lienElement.appendChild(iconeElement);
-      lienElement.appendChild(texteElementLienModal);
+        // Création élément <img> pour l'icône
+        if (lien.icone) {
+          const iconeElement = document.createElement("img");
+          iconeElement.src = lien.icone;
+          iconeElement.alt = "Icône";
+          iconeElement.classList.add("icone-lien-modal");
+          lienElement.appendChild(iconeElement);
+        }
 
-      // Ajouter l'élément <a> à la div modal-liens
-      modalLiens.appendChild(lienElement);
+        // Création élément <p> pour le texte du lien
+        if (lien["lien vers"]) {
+          const texteElementLienModal = document.createElement("p");
+          texteElementLienModal.textContent = lien["lien vers"];
+          texteElementLienModal.classList.add("texte-lien-modal");
+          lienElement.appendChild(texteElementLienModal);
+        }
+
+        modalLiens.appendChild(lienElement);
+      }
     });
+  }
+
+  // Si aucun lien n'a été ajouté, affichage du message "Aucun lien pour ce projet"
+  if (!hasLinks) {
+    const aucunLienText = document.createElement("p");
+    aucunLienText.textContent = "Aucun lien pour ce projet";
+    modalLiens.appendChild(aucunLienText);
   }
 }
