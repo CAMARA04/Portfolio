@@ -82,7 +82,7 @@ function createProjectCard(project) {
   projectDescription.textContent = project.description;
   projectCard.appendChild(projectDescription);
 
-  const projectLanguages = createLanguageList(project.languages);
+  const projectLanguages = createLanguageList(project.langages);
   projectCard.appendChild(projectLanguages);
 
   const learnMoreButton = document.createElement("button");
@@ -163,7 +163,7 @@ function displayProjectModal(project) {
   });
 
   modalTitle.textContent = project.name;
-  modalDescription.textContent = project.description;
+  modalDescription.textContent = project["description-modal"];
   modalImg.src = project.image;
 
   modalGeneral.innerHTML = "";
@@ -178,29 +178,38 @@ function displayProjectModal(project) {
   // Effacer les anciens langages
   modalLanguages.innerHTML = "";
 
-  const languageListModal = createLanguageList(project.languages);
-  // languageListModal.classList.add("language-list-modal");
+  const languageListModal = createLanguageList(project.langages, true);
+  modalLanguages.appendChild(languageListModal);
 
   displayProjectLinks(project);
-
-  modalLanguages.appendChild(languageListModal);
 
   modal.style.display = "block"; // Afficher la modal
 }
 
-function createLanguageList(languages) {
+function createLanguageList(languages, includeIcons = true) {
   const languageList = document.createElement("ul");
   languageList.classList.add("language-list");
 
   languages.forEach((language) => {
     const languageItem = document.createElement("li");
-    languageItem.textContent = language;
+
+    if (includeIcons && language.icone) {
+      const languageIcon = document.createElement("img");
+      languageIcon.src = language.icone;
+      languageIcon.alt = language.langage;
+      languageIcon.classList.add("language-icon");
+      languageItem.appendChild(languageIcon);
+    }
+
+    const languageName = document.createElement("span");
+    languageName.textContent = language.langage;
+    languageItem.appendChild(languageName);
+
     languageList.appendChild(languageItem);
   });
 
   return languageList;
 }
-
 function displayProjectLinks(project) {
   const modalLiens = document.querySelector(".lien-container-modal");
 
