@@ -38,7 +38,7 @@
             "image":"assets/Mon-vieux-grimoire.png" ,
             "description": "Développemnt de la partie Bac-kend pour une librairie ayant la volonté d’ouvrir un site de référencement et de notation de livres.",
             "description-modal":"Développement du back-end d'un site de notation de livres avec Express et MongoDB. Création d'un serveur et connexion à la base de données. Implémentation des modèles de données et des opérations CRUD pour la gestion des livres et des notations, avec un accent sur la sécurité des données. Mise en place d'un système d'authentification sécurisé pour les utilisateurs. Gestion du téléchargement et de l'optimisation des images, ajout de fonctionnalités pour noter les livres et calculer la note moyenne. Respect des bonnes pratiques du Green Code pour réduire l'empreinte écologique du site. Utilisation de Mongoose pour modéliser les données MongoDB et adoption d'une architecture MVC pour structurer l'application.",
-            "year":2023,
+            "year":2024,
             "category":"Développement web",
             "langages":[
               {
@@ -143,7 +143,7 @@
             "image":"./assets/KASA.png" ,
             "description": "Impmémentation du front-end d'une application en utilisant React et React Router pour creer une expérience utilisateur moderne et réactive.Dans ce projet j'ai eu l'occasion de travailler sur la logique de présentation des données et les composants React.Nous avons le résultat d'une application web interactive et visuellement attrayante!",
             "description-modal":"Dans ce projet, j'ai implémenté le front-end d'une application en utilisant React et React Router pour offrir une expérience utilisateur moderne et réactive. J'ai configuré la navigation entre les différentes pages de l'application avec React Router, ce qui a permis de gérer efficacement le routage dans une application web moderne.Le développement s'est concentré exclusivement sur le front-end, en se basant sur des maquettes et en utilisant des données extraites d'un fichier JSON. J'ai initiéle projet avec Create React App pour simplifier la configuration initiale de l'application React, et j'ai également utilisé Node.js pour exécuter du code JavaScript en dehors du navigateur.",
-            "year":2023,
+            "year":2024,
             "category":"Développement web",
             "langages":[
               {

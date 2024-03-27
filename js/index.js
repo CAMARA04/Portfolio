@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   };
 
-  // Animation du titre h1
+  // Fonction pour l'Animation du titre h1
   function animateTitle() {
     new Typewriter(txtAnim, {})
       .changeDelay(15)
@@ -58,7 +58,7 @@ function fetchProjects() {
     .then((data) => {
       data.projects.forEach((project) => {
         const projectCard = createProjectCard(project);
-        projectsContainer.appendChild(projectCard); // Append the projectCard to the projects container
+        projectsContainer.appendChild(projectCard);
       });
     })
     .catch((error) => console.error("Error fetching projects:", error));
@@ -97,7 +97,6 @@ function createProjectCard(project) {
   return projectCard;
 }
 //fontion pour initialiser email.js et gerer l'envoi des mails par le formulaire contzact
-
 const initializeContactForm = () => {
   document.addEventListener("DOMContentLoaded", () => {
     emailjs.init("7rxKpYQupmY49awrf");

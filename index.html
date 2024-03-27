@@ -31,8 +31,11 @@
     />
   </head>
 
+  <!-- body -->
+
   <body>
     <header class="header">
+      <!-- navbar -->
       <nav class="navbar">
         <a
           href="./assets/Mon-CV.pdf"
@@ -42,6 +45,8 @@
         >
           TELECHARGER MON CV <i class="fa-solid fa-download"></i>
         </a>
+
+        <!-- Onglets dans la Navbar -->
         <ul>
           <li class="onglet"><a href="#a-propos">A PROPOS</a></li>
           <li class="onglet"><a href="#competences">COMPETENCES</a></li>
@@ -57,6 +62,7 @@
         <div class="content">
           <h1 class="title">Loic CAMARA</h1>
 
+          <!-- Insertion barre des liens haut de page -->
           <div class="bar-liens">
             <a
               class="lien-etiquette"
@@ -82,47 +88,66 @@
             </a>
           </div>
         </div>
+
+        <!-- Insertion de mon logo -->
         <div class="logo">
           <img id="logo-png" src="./assets/Mon_logo.png" alt="Mon logo" />
         </div>
       </section>
+
+      <!-- A propos -->
       <section id="a-propos">
         <div a-propos-left>
+          <!-- Insertion de ma photo -->
           <div class="Ma_photo">
             <img class="moi" src="./assets/Ma_Photo.jpg" alt="moi" />
           </div>
         </div>
+
+        <!-- Texte description à propos -->
         <div class="a-propos-right">
           <h2>A PROPOS DE MOI</h2>
           <p class="portfolio-text">
             Bienvenue sur mon portfolio !<br /><br />
-            Je suis Loic CAMARA, un passionné de technologie et de développement
-            web. Anciennement manager au sein du groupe BNP PARIBAS, j'ai acquis
-            des compétences solides en organisation, écoute active, résolution
-            de problèmes, gestion relationnelle, pilotage et analyse. Déterminé
-            et doté d'un goût prononcé pour les résultats concrets, j'apporte
-            également ma créativité et mon sens du détail à chaque projet.<br /><br />
+            Je suis <strong style="color: #af893e">Loic CAMARA</strong>, un
+            passionné de technologie et de développement web. Anciennement
+            manager au sein du groupe BNP PARIBAS, j'ai acquis des compétences
+            solides en organisation, écoute active, résolution de problèmes,
+            gestion relationnelle, pilotage et analyse. Déterminé et doté d'un
+            <strong>goût prononcé pour les résultats</strong> concrets,
+            j'apporte également
+            <strong style="color: #af893e">ma créativité</strong> et mon
+            <strong style="color: #af893e">sens du détail</strong> à chaque
+            projet.<br /><br />
             Animé par une passion dévorante pour l'univers de la tech, j'ai
             décidé d'entreprendre une reconversion professionnelle. Pour cela,
             j'ai choisi de me former au développement web au sein
             d'OpenClassrooms, dans le but d'obtenir ma certification
             professionnelle. Cette formation m'a permis de développer des
             compétences essentielles telles que la conception web, la création
-            et la maintenance de sites, ainsi que la création d'expériences
-            utilisateur engageantes.<br /><br />
+            et la maintenance de sites, ainsi que la création d'<strong
+              style="color: #af893e"
+              >expériences utilisateur</strong
+            >
+            engageantes.<br /><br />
             Au fil de cette aventure, j'ai également acquis une expertise dans
-            un large éventail de technologies et de langages, allant de HTML,
-            CSS, JavaScript à React, Git/GitHub, NodeJS, Express, MongoDB, et
-            les API REST. De plus, j'ai appris à utiliser divers outils et
-            méthodologies tels que Figma, MongoDB, l'intégration de l'IA avec
-            ChatGPT, ainsi que les méthodes agiles pour la gestion de
-            projets.<br /><br />
+            un large éventail de technologies et de langages, allant de
+            <strong style="color: #af893e"
+              >HTML, CSS, JavaScript à React, Git/GitHub, NodeJS, Express,
+              MongoDB, et les API REST</strong
+            >. De plus, j'ai appris à utiliser divers outils et méthodologies
+            tels que <strong>Figma, MongoDB, l'intégration de l'IA</strong> avec
+            ChatGPT, ainsi que les
+            <strong style="color: #af893e">méthodes agiles</strong> pour la
+            gestion de projets.<br /><br />
             À travers mon portfolio, je vous invite à découvrir mes
             réalisations, mes compétences et ma passion pour le développement
             web.
           </p>
         </div>
       </section>
+
+      <!-- Mes compétences -->
       <section id="competences">
         <h2 class="h2-bar">MES COMPETENCES</h2>
         <div class="competences-container">
@@ -179,15 +204,18 @@
         </div>
       </section>
 
+      <!-- Mes projets -->
       <section id="mes-projets">
         <h2 class="h2-bar">MES PROJETS</h2>
         <div class="projects"></div>
       </section>
+
+      <!-- Contact -->
       <section id="contact">
         <h2 class="h2-bar">CONTACT</h2>
-
         <p>Vous pouvez me contacter via le formulaire ci-dessous</p>
 
+        <!-- Formulaire de contact -->
         <form id="contact-form">
           <div class="infos-contact">
             <!-- <label for="name">Nom:</label> -->
@@ -231,6 +259,7 @@
               required
             />
           </div>
+
           <!-- <label for="message">Message:</label> -->
           <textarea
             class="message-contact"
@@ -243,6 +272,7 @@
           <button class="submit-contact" type="submit">Envoyer</button>
         </form>
 
+        <!-- Je remets les liens en bas de page  -->
         <div class="bar-liens-bottom">
           <a
             class="lien-etiquette"
@@ -269,6 +299,7 @@
         </div>
       </section>
 
+      <!-- footer avec le copyright -->
       <footer>
         <div id="copyright">
           <p>©Copyright 2024 - Loic CAMARA</p>
@@ -283,6 +314,7 @@
 
         <h2 class="modal-title"></h2>
 
+        <!-- Description de l'image -->
         <div class="img-description">
           <img class="modal-img" src="" alt="Image du projet" />
           <div class="modal-description">
@@ -290,15 +322,19 @@
             <p class="text-description"></p>
           </div>
         </div>
+
+        <!-- Infos sur le projet en bas de la modale -->
         <div class="modal-infos-projet">
           <div class="modal-general">
             <h4 class="modal-infos-title">Général</h4>
             <div class="infos-modal-general"></div>
           </div>
+
           <div class="modal-languages">
             <h4 class="modal-infos-title">Languages/Outils</h4>
             <div class="languages-list-modal"></div>
           </div>
+
           <div class="modal-liens">
             <h4 class="modal-infos-title">Liens</h4>
             <div class="lien-container-modal"></div>
@@ -307,8 +343,6 @@
       </div>
     </div>
 
-    <!-- Modale pour afficher les détails du projet -->
-    <div id="modal-container"></div>
     <script src="js/index.js"></script>
   </body>
 </html>
