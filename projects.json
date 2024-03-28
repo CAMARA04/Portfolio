@@ -121,10 +121,25 @@
             "category":"Développement web",
             "langages":[
                 
+              {
+                "langage":"HTML",
+                "icone":"./assets/html.png"
+              },
+
+              {
+                "langage":"CSS",
+                "icone":"./assets/css.png"
+              },
+
+              {
+                "langage":"Lighthouse",
+                "icone":"./assets/lighthouse.png"
+              }
+              
                
 
             ],
-            "website": "https://www.google.fr/",
+            "website": "",
 
             "liens": [
                 {
@@ -163,11 +178,16 @@
               {
                 "langage":"JAVASCRIPT",
                 "icone":"./assets/js.png"
+              },
+
+              {
+                "langage":"Node JS",
+                "icone":"./assets/Node_JS.png"
               }
 
 
           ],
-            "website": "https://www.google.fr/",
+            "website": "",
 
             "liens": [
                 {
@@ -191,13 +211,13 @@
             "category":"Développement web",
             "langages":[
               {
-                "langage":"",
-                "icone":""
+                "langage":"METHODOLOGIE AGILE",
+                "icone":"./assets/Agile-method.png"
               }
               
 
           ],
-            "website": "https://www.google.fr/",
+            "website": "",
 
             "liens": [
                 {

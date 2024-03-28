@@ -409,8 +409,9 @@ gap: 120px;
 
 .project-card ul{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
-    gap: 20px;
+    gap: 30px;
     font-size: 22px;
     margin-top: 20px;
     padding: 20px;
@@ -423,7 +424,6 @@ gap: 120px;
 }
 
 .language-list{
-    padding-left:20px ;
     display: flex;
     justify-content: center;
     gap: 10px;   
@@ -608,7 +608,6 @@ gap: 120px;
   .modal-img{
     width: 60%;
     object-fit: cover;
-    object-position: left;
     border-radius: 15px;
     border: 1px solid var(---gold-color);
     padding: 5PX;
@@ -680,8 +679,8 @@ gap: 120px;
   }
 
   .languages-list-modal ul   {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
     gap: 25px;
     font-size: 20px;
     color: black;
@@ -1098,7 +1097,7 @@ gap: 120px;
     width: 100%;
     border-radius:0px;
     border: none;
-    padding: none;
+    padding:0px;
    
     
 }
@@ -1180,6 +1179,11 @@ gap: 120px;
 
     .learn-more-button{
         width: 60%;
+    }
+
+    .project-card ul{
+        justify-content: space-evenly;
+        font-size: 20px;
     }
 }
 
