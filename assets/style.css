@@ -337,11 +337,14 @@ gap: 120px;
     border:1px solid var(---gold-color) ;
     border-radius: 15px;
     padding: 10px;
+   
   }
 
   .liste-competences{
     display: flex;
     gap: 60px;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
 
@@ -388,7 +391,6 @@ gap: 120px;
     width: 100%;
     height: 250px;
     object-fit: cover;
-    object-position: left;
     background-color: white;
     border-radius: 20px 20px 0px 0px;  
 }
@@ -398,14 +400,15 @@ gap: 120px;
     font-size: 24px;
     padding-top: 20px;
     color: black;
+    text-align: center;
 }
 
 .project-card P {
     color: black;
-  
-    padding: 15px 10px 15px 10px;
+    text-align: justify;
+    padding: 15px 20px 0px 15px;
     font-size: 22px;
-    height: 150px;
+    height: 160px;
 }
 
 .project-card ul{
@@ -1001,6 +1004,7 @@ gap: 120px;
 
 .logo-competence{
     width: 40%;
+   
 }
 
 .projects{
@@ -1010,11 +1014,14 @@ gap: 120px;
 
 .project-image{
     padding: 0;
-    height: 100%;  
+    height: 200px;
+     
 }
 
 .project-card p{
     font-size: 21px;
+    height: auto;
+    
 }
 
 #contact p {
@@ -1162,9 +1169,15 @@ gap: 120px;
             align-items: center;
         }
 
-        .project-card p{
-            font-size: 16px;
+        .project-card{
+            width: 85%;
+
         }
+        .project-card p{
+            font-size: 18px;
+            text-align:left;
+            padding: 0px 10px;
+                }
 
         .project-card ul{
             grid-template-columns: 1fr 1fr;
@@ -1172,7 +1185,7 @@ gap: 120px;
 
         .a-propos-right p{
             padding: 20px 10px 0px 10px;
-            text-align: center;
+            
             
         }
     }
