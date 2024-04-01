@@ -3,7 +3,8 @@
         {
             "id":1,
             "name":"BOOKI",
-            "image":"assets/booki.png" ,
+            "image":"assets/booki.webp" ,
+            "alt": "Image du projet BOOKI",
             "description": "Dévelopement d’un site internet permettant aux usagers de trouver des hébérgements et des activités dans la ville de leur choix.",
             "description-modal":"Développement de la page d'accueil d'une agence de voyage avec HTML et CSS, en intégrant une interface responsive. Utilisation des maquettes Figma pour mobile, tablette et desktop pour assurer une intégration précise.Garantie d'une expérience utilisateur optimale sur tous les appareils et toutes les tailles d'écran grâce à une conception responsive de la page d'accueil.",
             "year":2023,
@@ -11,11 +12,13 @@
             "langages":[
                 {
                   "langage":"HTML",
-                  "icone":"./assets/html.png"
+                  "icone":"./assets/html.png",
+                  "alt":"Icone HTML"
                 },
                 {
                   "langage":"CSS",
-                  "icone":"./assets/css.png"
+                  "icone":"./assets/css.png",
+                  "alt":"Icone CSS"
                 }
 
             ],
@@ -35,7 +38,8 @@
         {
             "id":2,
             "name":"MON VIEUX GRIMOIRE",
-            "image":"assets/Mon-vieux-grimoire.png" ,
+            "image":"assets/Mon-vieux-grimoire.webp" ,
+            "alt": "Image du projet MON VIEUX GRIMOIRE",
             "description": "Développemnt de la partie Bac-kend pour une librairie ayant la volonté d’ouvrir un site de référencement et de notation de livres.",
             "description-modal":"Développement du back-end d'un site de notation de livres avec Express et MongoDB. Création d'un serveur et connexion à la base de données. Implémentation des modèles de données et des opérations CRUD pour la gestion des livres et des notations, avec un accent sur la sécurité des données. Mise en place d'un système d'authentification sécurisé pour les utilisateurs. Gestion du téléchargement et de l'optimisation des images, ajout de fonctionnalités pour noter les livres et calculer la note moyenne. Respect des bonnes pratiques du Green Code pour réduire l'empreinte écologique du site. Utilisation de Mongoose pour modéliser les données MongoDB et adoption d'une architecture MVC pour structurer l'application.",
             "year":2024,
@@ -43,21 +47,25 @@
             "langages":[
               {
                 "langage":"HTML",
-                "icone":"./assets/html.png"
+                "icone":"./assets/html.png",
+                "alt":"Icone HTML"
               },
               {
                 "langage":"CSS",
-                "icone":"./assets/css.png"
+                "icone":"./assets/css.png",
+                "alt":"Icone CSS"
               },
 
               {
                 "langage":"MONGO DB",
-                "icone":"./assets/Mongodb-PNG-Pic.png"
+                "icone":"./assets/Mongodb-PNG-Pic.png",
+                "alt":"Icone Mongo DB"
               },
 
               {
                 "langage":"JAVASCRIPT",
-                "icone":"./assets/js.png"
+                "icone":"./assets/js.png",
+                "alt":"Icone Javascript"
               }
 
 
@@ -78,7 +86,8 @@
         {
             "id":3,
             "name":"SOPHIE BLUEL",
-            "image":"assets/SOPHIE -BLUEL.jpg" ,
+            "image":"assets/SOPHIE -BLUEL.webp" ,
+            "alt": "Image du projet SOPHIE BLUEL",
             "description": "Mission front-end pour la conception du site portfolio d'une architecte d’intérieur.Création d'une page web web dynamique en utilisant JavaScript et en communiquant avec une API.",
             "description-modal":"Développement d'une page web dynamique pour une architecte d'intérieur, utilisant JavaScript et une API. Gestion du Front-End, incluant la présentation des travaux de l'architecte avec HTML et JavaScript. Création d'une page de connexion pour l'administrateur et d'une modale pour l'upload de médias.",
             "year":2023,
@@ -86,16 +95,19 @@
             "langages":[
               {
                 "langage":"HTML",
-                "icone":"./assets/html.png"
+                "icone":"./assets/html.png",
+                "alt":"Icone HTML"
               },
               {
                 "langage":"CSS",
-                "icone":"./assets/css.png"
+                "icone":"./assets/css.png",
+                "alt":"Icone CSS"
               },
 
               {
                 "langage":"JAVASCRIPT",
-                "icone":"./assets/js.png"
+                "icone":"./assets/js.png",
+                "alt":"Icone Javascript"
               }
 
           ],
@@ -114,7 +126,8 @@
         {
             "id":4,
             "name":"NINA CARDUCCI",
-            "image":"assets/nina-carducci.jpg" ,
+            "image":"assets/nina-carducci.webp" ,
+            "alt": "Image du projet NINA CARDUCCI",
             "description": "Optimisation SEO du site d’une photographe dans le but de gagner en performance et aussi améliorer l’expérience utilisateur.",
             "description-modal":"J'ai optimisé le référencement d'un site en améliorant sa performance et son accessibilité. Après une analyse approfondie des problèmes de chargement et de référencement, j'ai formulé des recommandations pour améliorer la vitesse de chargement, la structure du code et le référencement. En appliquant ces recommandations, j'ai réussi à optimiser les performances et l'accessibilité du site afin d'améliorer son classement sur les moteurs de recherche. J'ai également rédigé un rapport détaillé illustrant les résultats avant et après les modifications, mettant en évidence les changements apportés et leur impact sur le référencement et l'accessibilité du site.",
             "year":2023,
@@ -123,17 +136,20 @@
                 
               {
                 "langage":"HTML",
-                "icone":"./assets/html.png"
+                "icone":"./assets/html.png",
+                "alt":"Icone HTML"
               },
 
               {
                 "langage":"CSS",
-                "icone":"./assets/css.png"
+                "icone":"./assets/css.png",
+                "alt":"Icone CSS"
               },
 
               {
                 "langage":"Lighthouse",
-                "icone":"./assets/lighthouse.png"
+                "icone":"./assets/lighthouse.png",
+                "alt":"Icone Lighthouse"
               }
               
                
@@ -155,7 +171,8 @@
 
             "id":5,
             "name":"KASA",
-            "image":"./assets/KASA.png" ,
+            "image":"./assets/KASA.webp" ,
+            "alt": "Image du projet KASA",
             "description": "Impmémentation du front-end d'une application en utilisant React et React Router pour creer une expérience utilisateur moderne et réactive.Dans ce projet j'ai eu l'occasion de travailler sur la logique de présentation des données et les composants React.Nous avons le résultat d'une application web interactive et visuellement attrayante!",
             "description-modal":"Dans ce projet, j'ai implémenté le front-end d'une application en utilisant React et React Router pour offrir une expérience utilisateur moderne et réactive. J'ai configuré la navigation entre les différentes pages de l'application avec React Router, ce qui a permis de gérer efficacement le routage dans une application web moderne.Le développement s'est concentré exclusivement sur le front-end, en se basant sur des maquettes et en utilisant des données extraites d'un fichier JSON. J'ai initiéle projet avec Create React App pour simplifier la configuration initiale de l'application React, et j'ai également utilisé Node.js pour exécuter du code JavaScript en dehors du navigateur.",
             "year":2024,
@@ -163,26 +180,33 @@
             "langages":[
               {
                 "langage":"HTML",
-                "icone":"./assets/html.png"
+                "icone":"./assets/html.png",
+                "alt":"Icone HTML"
+
               },
               {
                 "langage":"SASS",
-                "icone":"./assets/SASS.png"
+                "icone":"./assets/SASS.png",
+                "alt":"Icone SASS"
               },
 
               {
                 "langage":"REACT",
-                "icone":"./assets/react.png"
+                "icone":"./assets/react.png",
+                "alt":"Icone REACT"
               },
 
               {
                 "langage":"JAVASCRIPT",
-                "icone":"./assets/js.png"
+                "icone":"./assets/js.png",
+                "alt":"Icone Javascript"
               },
 
               {
                 "langage":"Node JS",
-                "icone":"./assets/Node_JS.webp"
+                "icone":"./assets/Node_JS.webp",
+                "alt":"Icone JS"
+
               }
 
 
@@ -204,7 +228,8 @@
 
             "id":6,
             "name":"QWENTA",
-            "image":"./assets/Qwenta.png" ,
+            "image":"./assets/Qwenta.webp" ,
+            "alt": "Image du projet QWENTA",
             "description": "Cette mission consistait à mener, préparer et planifier le projet de développement du site de Qwenta grâce à la méthodologie de travail agile.L'objectif était de développer un 'Menu Maker'permettant aux restaurateurs d'afficher et de mettre en page leurs menus facilement, en quelques clics.",
             "description-modal":"Dans ce projet, j'ai pris en charge la planification du développement d'un site web.J'ai mené une veille technologique afin de rester informé des dernières tendances et technologies pertinentes pour le projet, utilisant un système de veille pour suivre les évolutions dans le domaine du développement web.Mon rôle principal a été de rédiger les spécifications techniques du projet, en identifiant les besoins fonctionnels et en décomposant les fonctionnalités en tâches spécifiques.Pour organiser le projet et assurer un suivi structuré et efficace, j'ai utilisé L'outil de gestion de projet Notion, où j'ai créé un tableau Kanban pour visualiser le déroulement du projet.",
             "year":2023,
@@ -212,7 +237,8 @@
             "langages":[
               {
                 "langage":"METHODOLOGIE AGILE",
-                "icone":"./assets/Agile-method.png"
+                "icone":"./assets/Agile-method.png",
+                "alt":"Icone Methodologie agile"
               }
               
 
